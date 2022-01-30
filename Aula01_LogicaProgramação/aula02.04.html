@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lógica de programação JavaScript</title>
+    </head>
+    <body>
+        <header>
+            <h1>Curso de Lógica -  Aula 01</h1>
+        </header>
+        <h1>Lógica de programação com JavaScript</h1>
+        <script>
+            var notaProvaSemestralPrimeira = parseFloat(prompt("NOTA DA PRIMEIRA PROVA SEMESTRAL 0 a 5: "));
+            var notaProvaSemestralSegunda = parseFloat(prompt("NOTA DA SEGUNDA PROVA SEMESTRAL 0 a 5: "));
+            var notaProvaBimestral = parseFloat(prompt("NOTA BIMESTRAL 0 a 10"));
+
+            var mediaFinalNota = ((notaProvaSemestralPrimeira + notaProvaSemestralSegunda + notaProvaBimestral) / 2);
+
+            alert(mediaFinalNota >= 5);
+
+            // if(mediaFinalNota <= 5){
+            //     alert(false + mediaFinalNota);
+            // }else{
+            //     alert(true + mediaFinalNota);
+            // }
+
+
+        </script>
+    </body>
+</html>
