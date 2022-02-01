@@ -15,15 +15,14 @@
             var notaProvaBimestral = parseFloat(prompt("NOTA BIMESTRAL 0 a 10"));
 
             var mediaFinalNota = ((notaProvaSemestralPrimeira + notaProvaSemestralSegunda + notaProvaBimestral) / 2);
-
-            alert(mediaFinalNota >= 5);
-
-            // if(mediaFinalNota <= 5){
-            //     alert(false + mediaFinalNota);
-            // }else{
-            //     alert(true + mediaFinalNota);
-            // }
             
+            if(mediaFinalNota >=5){
+                alert("Voce tirou: " + mediaFinalNota + " , Aprovado!!");
+            }
+            else{
+                alert("Voce tirou: " + mediaFinalNota + " , Recuperacao!!");
+            }
+
         </script>
     </body>
 </html>
