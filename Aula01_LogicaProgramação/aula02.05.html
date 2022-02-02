@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lógica de programação JavaScript</title>
+    </head>
+    <body>
+        <header>
+            <h1>Curso de Lógica -  Aula 01</h1>
+        </header>
+        <h1>Lógica de programação com JavaScript</h1>
+
+        <script>
+            var numberOne = parseInt(prompt("Digite um numer: "));
+            var numberTwo = parseInt(prompt("Digete outro numero: "));
+
+            var sortNumber = parseInt(Math.random() * 2);
+
+            if(numberOne === numberTwo){
+                alert('Empate');
+            }else{
+                sortNumber;
+                alert("Numero sorteado: " + sortNumber);
+                if(sortNumber === 0){
+                    if(numberOne < numberTwo){
+                        alert("Numero 1 ganhou");
+                    }else{
+                        alert("Numero 2 ganhou");
+                    }
+                }else{
+                    if(numberOne > numberTwo){
+                        alert("Numero 1 ganhou");
+                    }else{
+                        alert("Numero 2 ganhou");
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
