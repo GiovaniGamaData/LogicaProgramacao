@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lógica de programação JavaScript</title>
+    </head>
+    <body>
+        <header>
+            <h1>Curso de Lógica -  Aula 01</h1>
+        </header>
+        <h1>Lógica de programação com JavaScript</h1>
+    </body>
+
+    <script>
+        var primeiroNome = prompt('Digite seu primeiro nome: ');
+        var nomeComprimento = primeiroNome.length;
+
+        switch(nomeComprimento){
+            case 5:
+                alert('oi');
+                break;
+            case 6:
+                alert('legal');
+                break;
+            case 7:
+                alert('Teste')
+                break;
+            default:
+                alert("Tente novamente");
+        }
+
+        var numero = prompt("Digite o numero 1: ");
+        
+        switch(numero){
+            case 1:
+                alert('E numero');
+                break;
+            case "1":
+                alert('String');
+                break;
+        }
+
+        if(typeof numero === "number"){
+            alert('numero');
+        }else if(typeof numero === "string"){
+            alert("e string");
+        }
+
+    </script>
+</html>
