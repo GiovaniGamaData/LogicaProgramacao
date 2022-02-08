@@ -12,12 +12,25 @@
     </body>
 
     <script>
+
         var numero = parseFloat(prompt('Digite um numero: '));
 
-        var indiceNumero = 1;
-        while(indiceNumero <= 100000){
-            document.write(numero + ' x ' + indiceNumero + ' = ' + numero * indiceNumero + '<br>')
-            indiceNumero = indiceNumero + 1;
+        var indiceNumero = 100;
+
+        do {
+            document.write(numero + ' x ' + indiceNumero + ' = ' + numero * indiceNumero + '<hr>');;
+            indiceNumero += 1;
+        }while(indiceNumero <= 1000)
+        document.write("Saiu do loop");
+
+        while(indiceNumero <=1000){
+            document.write(numero + ' x ' + indiceNumero + ' = ' + numero * indiceNumero + '<hr>');
+            indiceNumero += 1;
         }
+
+        for(indiceNumero; indiceNumero <= 1000; indiceNumero++){
+            document.write(numero + ' x ' + indiceNumero + ' = ' + numero * indiceNumero + '<hr>');
+        }
+
     </script>
 </html>
