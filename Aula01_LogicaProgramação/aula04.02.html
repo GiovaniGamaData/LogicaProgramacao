@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lógica de programação JavaScript</title>
+    </head>
+    <body>
+        <header>
+            <h1>Curso de Lógica -  Aula 04</h1>
+        </header>
+        <h1>Lógica de programação com JavaScript</h1>
+
+        <button onclick="mostrarTabuada()">Criar tabuada</button>
+        <button onclick="limparTabuada()">Limpar tabuada</button>
+
+        <div class="output"></div>
+
+        <script>
+
+            function mostrarTabuada(){
+                var numeroTabuada = parseInt(prompt("Escolha um numero: "));
+                
+                limparTabuada();
+
+                var indice = 1;
+
+                for(indice; indice <= 1000; indice++){
+                    mensagem += (numeroTabuada + ' x ' + indice + ' = ' + (numeroTabuada * indice) + '<br>');
+
+                    if(indice %10 === 0 && indice > 0){
+                        mensagem += '<hr>'
+                    }
+                }
+
+                output.innerHTML = mensagem;
+            }
+
+            function limparTabuada(){
+                mensagem = ''
+                output.innerHTML = mensagem;
+            }
+
+            var output = document.querySelector(".output");
+
+            var mensagem = ''
+
+        </script>
+    </body>
+</html>

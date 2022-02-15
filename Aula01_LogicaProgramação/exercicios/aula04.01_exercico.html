@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lógica de programação JavaScript</title>
+    </head>
+    <body>
+        <header>
+            <h1>Curso de Lógica -  Aula 01</h1>
+        </header>
+        <h1>Lógica de programação com JavaScript</h1>
+
+        <button onclick="adicao()">+</button>
+        <button onclick="subtracao()">-</button>
+        <button onclick="multiplicacao()">*</button>
+        <button onclick="divisao()">/</button>
+
+        <div class="output"></div>
+
+        <script>
+
+            var numero = parseFloat(prompt("Digite um número: "));
+
+            escreve();
+
+            function escreve(){
+                var output = document.querySelector('.output')
+                output.innerHTML = numero;
+            }
+
+            function adicao(){
+                var numeroSoma = parseFloat(prompt("Digite um número: "));
+                numero += numeroSoma;
+                escreve();
+            }
+            
+            function subtracao(){
+                var numeroSub = parseFloat(prompt("Digite um número: "));
+                numero -= numeroSub;
+                escreve();
+            }
+
+            function multiplicacao(){
+                var numeroMult = parseFloat(prompt("Digite um número: "));
+                numero *= numeroMult;
+                escreve();
+            }
+
+            function divisao(){
+                var numeroDiv = parseFloat(prompt("Digite um número: "));
+                numero /= numeroDiv;
+                escreve();
+            }
+
+        </script>
+    </body>
+</html>
