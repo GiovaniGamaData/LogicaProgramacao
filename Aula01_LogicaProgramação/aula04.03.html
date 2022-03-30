@@ -10,23 +10,44 @@
         </header>
         <h1>Lógica de programação com JavaScript</h1>
 
-        <button onclick="escolheBaseAltura()">Escolha a base e altura!</button>
+        <button onclick="iniciarContaBaseAltura()">Escolha a base e altura!</button>
         <div class="output" ></div>
 
         <script>
-            var output = document.querySelector('.output');
-            var mensagem = '';
 
-            function escolheBaseAltura(){
-                var base = parseFloat(prompt('Digite a largura: '));
-                var altura = parseFloat(prompt('Digite a altura: '));
-                mostrarArea(base, altura);
+            function escreve(mensagem){
+                var output = document.querySelector(".output");
+                output.innerHTML = mensagem;
             }
 
-            function mostrarArea(base, altura){
-                var area = base * altura;
-                mensagem = area;
-                output.innerHTML = mensagem;
+            function iniciarContaBaseAltura(){
+                var base = parseFloat(prompt('Digite a largura: '));
+                var altura = parseFloat(prompt('Digite a altura: '));
+
+                try{
+                    var resultadoArea = calcularArea(base, altura);
+                } catch(e){
+                    e = "deu erro, apenas numeros sao validos";
+                    alert(e);
+                    return;
+                } 
+                
+                escreve(resultadoArea);
+            }
+
+            function calcularArea(base, altura){
+                var area = null;
+
+                if(isNaN(base) || isNaN(altura)){
+                    throw new Error("Somente numero sao validos!!");
+                }else if(base === undefined || altura === undefined){
+                    throw new Error("nao pode ser vazio");
+                }else{
+                    return;
+                }
+
+                area = base * altura;
+                return area;
             }
             
         </script>

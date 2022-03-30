@@ -10,42 +10,65 @@
         </header>
         <h1>Lógica de programação com JavaScript</h1>
 
-        <button onclick="calcular('+')">+</button>
-        <button onclick="calcular('-')">-</button>
-        <button onclick="calcular('*')">*</button>
-        <button onclick="calcular('/')">/</button>
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button onclick="iniciarCalculo('/')">/</button>
 
-        <div class="output"></div>
+        <div id="output"></div>
 
         <script>
 
-            var numero = parseFloat(prompt("Digite um número: "));
+            var numeroCalculado = parseFloat(prompt("Digite um número: "));
 
-            escreve();
-            
-            function escreve(){
-                var output = document.querySelector('.output')
-                output.innerHTML = numero;
+            escreve(numeroCalculado);
+
+            function iniciarCalculo(tipoCalculo){
+                var numeroEscolhido = document.querySelector('#output').textContent;
+                numeroEscolhido = parseFloat(numeroEscolhido);
+                var numeroCalculado = prompt(parseFloat("Digite outro numero: "));
+                // var mensagemNumero  = calcular(tipoCalculo, numeroEscolhido, numeroCalculado);
+
+                try{
+                    var mensagemNumero  = calcular(tipoCalculo, numeroEscolhido, numeroCalculado);
+                } catch(e){
+                    e = "deu erro";
+                    alert(e);
+                    reuturn;
+                }
+
+                escreve(mensagemNumero);
             }
+            
+            function escreve(mensagem){
+                var output = document.querySelector('#output')
+                output.innerHTML = mensagem;
+            } 
 
-            function calcular(tipoCalculo){
-                var numeroCalculo = parseFloat(prompt('Digite outro número: '));
+            function calcular(tipoCalculo, numeroEscolhido, numeroCalculado){
+
+                var numero = null;
+
+                if(isNaN(numeroEscolhido) || isNaN(numeroCalculado)){
+                    throw new Error("Digete numero, nao textos")
+                }
+
                 switch(tipoCalculo){
-                    case '+': 
-                        numero += numeroCalculo;
+                    case '+':
+                        numero = numeroEscolhido + numeroCalculado;
                         break;
                     case '-':
-                        numero -= numeroCalculo;
+                        numero = numeroEscolhido - numeroCalculado;
                         break;
                     case '*':
-                        numero *= numeroCalculo;
+                        numero = numeroEscolhido * numeroCalculado;
                         break;
                     case '/':
-                        numero /= numeroCalculo;
+                        numero = numeroEscolhido / numeroCalculado;
                         break;
                 }
-                escreve();
 
+                return numero;
             }
 
         </script>
