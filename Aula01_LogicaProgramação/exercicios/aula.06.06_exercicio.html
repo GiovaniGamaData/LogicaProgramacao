@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lógica de programação JavaScript</title>
+    </head>
+    <body>
+        <header>
+            <h1>Curso de Lógica -  Aula 01</h1>
+        </header>
+        <h1>Lógica de programação com JavaScript</h1>
+        <table border="1">
+
+            <div>
+                <h1>Produto</h1>
+                <h2 class="output"></h2>
+            </div>
+            <div>
+                <button onclick="produto1.comprar()">comprar caneta</button>
+                <p class="conteudo"></p>
+            </div>
+    </body>
+
+    <script>
+
+        var msg = '';
+        var produto1 = new Object;
+
+        produto1.nomeProduto = "Caneta";    
+        produto1.cor = "Azul";
+        produto1.preco = 2.0;
+        produto1.quantidadeEstoque = 200;
+        produto1.comprar = function(qtd){
+            if(!qtd){
+                qtd = 1;
+            }
+            console.log("comproou");
+            this.quantidadeEstoque -= qtd;
+            console.log(this.quantidadeEstoque);
+            var msgCompra = "Comprou caneta";
+            var outputCompra = document.querySelector('.conteudo');
+            outputCompra.innerHTML = msgCompra;
+        };
+
+        msg = `Nome do produto: ${produto1.nomeProduto}, cor: ${produto1.cor}, 
+        preco: ${produto1.cor} quantidade disponivel: ${produto1.quantidadeEstoque}`;
+
+        var output = document.querySelector('.output');
+        output.innerHTML = msg;
+
+    </script>
+</html>
