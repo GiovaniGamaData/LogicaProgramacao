@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lógica de programação JavaScript</title>
+    </head>
+    <body>
+        <header>
+            <h1>Curso de Lógica -  Aula 06</h1>
+        </header>
+        <h1>Lógica de programação com JavaScript</h1>
+
+        <div class="output"></div>
+    </body>
+
+    <script>
+        var cadastro = [
+            {'nome': 'Giovani', 'email': 'giovani.silva@gmail.com'},
+            {'nome': 'Juan', 'email': 'juan.lima@gmail.com'},
+            {'nome': 'Sara', 'email': 'sara.jesus@gmail.com'},
+        ];
+
+        var msg = '';
+
+        for(var i = 0; i < cadastro.length; i++){
+            // msg += produtos[i].nome + + produtos[i].preco + "<br>";
+            msg += `${cadastro[i].nome} = ${cadastro[i].email}<br>`;
+        }
+
+        document.querySelector('.output').innerHTML = msg;
+    </script>
+</html>
